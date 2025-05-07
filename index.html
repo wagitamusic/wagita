@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wagita | Official Site</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a2d9d7b0d0.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #ffffff;
+      --accent: #c0a16b;
+      --dark: #111;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: var(--dark);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    /* ---------- HEADER / HERO ---------- */
+    header {
+      position: relative;
+      height: 100vh;
+      background: url("Fragments_of_Why_3000_with_text.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section:nth-of-type(even) {
+      background: #1a1a1a;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* ---------- SOCIAL ICONS ---------- */
+    .socials a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero / Header -->
+  <header id="home">
+    <div class="content">
+      <h1>WAGITA</h1>
+      <h2>Fragments of Why – New Album Out Now</h2>
+      <a href="#music" class="btn">Listen</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h3 class="section-title">About</h3>
+    <p>
+      Wagita weaves ethereal melodies with introspective lyrics, creating sonic landscapes that invite listeners on a journey through the fragments of why we love, dream, and wonder.
+    </p>
+  </section>
+
+  <!-- Music Section (Embed) -->
+  <section id="music">
+    <h3 class="section-title">Music</h3>
+    <p>Stream the latest release:</p>
+    <!-- Replace the src URL with your album/track embed link -->
+    <iframe
+      style="border-radius: 12px"
+      src="https://open.spotify.com/embed/album/your_album_id_here?utm_source=generator"
+      width="100%"
+      height="380"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </section>
+
+  <!-- Tour Section -->
+  <section id="tour">
+    <h3 class="section-title">Tour</h3>
+    <p>Stay tuned for upcoming dates.</p>
+  </section>
+
+  <!-- Contact & Socials -->
+  <section id="contact">
+    <h3 class="section-title">Contact</h3>
+    <p>For bookings and inquiries: <a href="mailto:wagitamusic@gmail">booking@wagita.com</a></p>
+
+    <div class="socials">
+      <a href="https://instagram.com/wagitamusic" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/wagitamusic" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://facebook.com/wagitamusic" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com/wagita" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <span id="year"></span> Wagita. All Rights Reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Set current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
